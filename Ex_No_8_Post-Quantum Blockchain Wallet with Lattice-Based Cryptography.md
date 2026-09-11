@@ -1,34 +1,24 @@
-# Experiment 8: Post-Quantum Blockchain Wallet with Lattice-Based Cryptography
-# Aim:
+## Experiment 8: Post-Quantum Blockchain Wallet with Lattice-Based Cryptography.
+## Aim:
 To create a quantum-resistant wallet using lattice-based cryptography instead of traditional ECDSA, ensuring that future quantum computers cannot break private keys.
 
-# Algorithm:
-## Step 1: Understanding Quantum Threat to Blockchain
-ECDSA-based wallets are vulnerable to quantum computers.
-
+## Algorithm:
+Step 1: Understanding Quantum Threat to Blockchain ECDSA-based wallets are vulnerable to quantum computers.
 
 Lattice-based cryptography (e.g., NTRU, CRYSTALS-Kyber) provides quantum resistance.
 
-
-## Step 2: Implement Lattice-Based Signature Scheme
-Use precomputed NTRU-based public-private keys for authentication.
-
+Step 2: Implement Lattice-Based Signature Scheme Use precomputed NTRU-based public-private keys for authentication.
 
 Store hashed lattice-based signatures instead of traditional Ethereum signatures.
 
-
-## Step 3: Secure Transactions
-Users sign transactions using lattice cryptographic proofs.
-
+Step 3: Secure Transactions Users sign transactions using lattice cryptographic proofs.
 
 The smart contract verifies the proof before allowing transactions.
 
-
-
-# Program:
-
-(Solidity does not natively support lattice cryptography yet, but we simulate it using custom hash-based authentication.)
+## Program:
 ```
+(Solidity does not natively support lattice cryptography yet, but we simulate it using custom hash-based authentication.)
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -83,27 +73,24 @@ contract PostQuantumWallet {
         balances[msg.sender] += msg.value;}
 }
 ```
-
-# Expected Output:
+## Expected Output:
 Users register using a post-quantum secure public key.
-
 
 Transactions require a quantum-resistant signature for authentication.
 
-
 If a traditional quantum-vulnerable hash is used, the transaction fails.
 
-
-# RESULT : 
-High-Level Overview:
+## High-Level Overview:
 First quantum-safe Ethereum-compatible wallet prototype.
-
 
 Uses lattice-based key hashes instead of ECDSA.
 
-
 Demonstrates how Ethereum will transition to post-quantum security.
-
 
 Inspired by NIST’s post-quantum cryptography competition.
 
+## Output:
+<img width="1408" height="711" alt="image" src="https://github.com/user-attachments/assets/03dca7cf-5ae0-4ec8-9953-d74293ab317c" />
+
+## RESULT :
+Thus, to create a quantum-resistant wallet using lattice-based cryptography instead of traditional ECDSA, ensuring that future quantum computers cannot break private keys was deployed and executed.
